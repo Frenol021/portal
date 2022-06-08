@@ -25,7 +25,13 @@
 
 @yield('content')
 
-
+<style>
+    .nav-header{
+        margin-right: 50px;
+        padding-right: 50px;
+        background-color: lightskyblue;
+    }
+</style>
 
     
 </body>

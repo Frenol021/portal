@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Unit;
 class UnitController extends Controller
 {
     //
-    public function home(){
-        return "welcome to shiftech Africa";
+    public function home()
+    {
+
+        $users=Unit::all();
+        return view('home',compact('users'));
+
+       
     }
 }
