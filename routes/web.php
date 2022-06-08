@@ -23,3 +23,4 @@ Route::get('login', function () {
 Route::post('/login',[UserController::class, 'login']);
 Route::get('/home',[UnitController::class,'home']);
 Route::get('/registration',[RegistrationController::class,'registration'])->name('registration');
+Route::get('/enroll',[UnitController::class,'enroll']);

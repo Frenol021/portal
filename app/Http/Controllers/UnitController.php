@@ -15,4 +15,10 @@ class UnitController extends Controller
 
        
     }
+    public function enroll($id){
+        
+
+        $users=Unit::find($id);
+        return view('enroll',['users'=>$users]);
+    }
 }

@@ -31,6 +31,31 @@
         padding-right: 50px;
         background-color: lightskyblue;
     }
+    .uni{
+        float: left;
+    }
+    .image{
+        max-height: 200px;
+        display: flex;
+        float: none;
+        margin-left: 40px;
+        margin-bottom: 50px;
+    
+        
+    }
+    .unit{
+        margin-left: 40px;
+        margin-top: 0px;  
+    }
+    .button{
+        float: right;
+        margin-left: 100px;
+        margin-top: -250px;
+    }
+    .enroll{
+        float: right;
+        margin-left: 100px;
+    }
 </style>
 
     

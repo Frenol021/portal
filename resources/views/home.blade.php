@@ -38,6 +38,7 @@
        
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">curriculum</a></li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -51,7 +52,9 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div>
+<!-- units to be enrolled -->
+
+<div class="uni" >
 
   <!--<table>
   <tr>
@@ -68,9 +71,16 @@
 
 @foreach($users as $user)
   
-  <img src="{{$user->image}}" alt="">
-  <h3>{{$user->unit}}</h3>
+  <img class="image" src="{{$user->image}}" alt="">
+  
+  <h3 class="unit">{{$user->unit}}</h3>
+  
+  <a href="{{enroll/['id]}}" class=" btn btn-success button">enroll</a>
  @endforeach
+
+ <div>
+  
+ </div>
 </div>
 
 
