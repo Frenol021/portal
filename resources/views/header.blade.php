@@ -1,1 +1,4 @@
-<h1>shiftech Africa portal</h1>
+
+ <h1 class="heading" >shiftech Africa portal </h1>
+
+

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\RegistrationController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,13 @@ Route::get('login', function () {
 });
 
 Route::post('/login',[UserController::class, 'login']);
-Route::get('/home',[UnitController::class,'home']);
+
 Route::get('/registration',[RegistrationController::class,'registration'])->name('registration');
 Route::get('/enroll',[UnitController::class,'enroll']);
+Route::get('add_to_curriculum/{id}',[App\Http\Controllers\HomeController::class,'addToCurriculum'])->name('add_to_curriculum');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/enroll', [App\Http\Controllers\HomeController::class, 'enroll'])->name('enroll');
+
+Route::get('curriculum',[App\Http\Controllers\HomeController::class,'curriculum'])->name('curriculum');

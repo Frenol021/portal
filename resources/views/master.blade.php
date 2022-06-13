@@ -21,41 +21,100 @@
 </head>
 <body>
 
-{{View::make('header')}}
 
-@yield('content')
+
+
 
 <style>
-    .nav-header{
-        margin-right: 50px;
-        padding-right: 50px;
-        background-color: lightskyblue;
+  
+    .container{
+        background-color: wheat;
+       padding: 10px;
+       font-size: 150%;
+       padding-top: 10px;
+        border-radius: 10px;
+        margin-top: 5px;
     }
-    .uni{
-        float: left;
+    .header{
+      
+        border-radius: 20px;
     }
-    .image{
-        max-height: 200px;
-        display: flex;
-        float: none;
-        margin-left: 40px;
-        margin-bottom: 50px;
-    
-        
-    }
-    .unit{
-        margin-left: 40px;
-        margin-top: 0px;  
-    }
-    .button{
+    .head{
+       
         float: right;
-        margin-left: 100px;
-        margin-top: -250px;
+        margin-top: 13px;
+        font-size: 100%;
+        border-bottom: none;
+        margin-right: 50px;
+      
+    }
+    
+  .custo-image{
+    float: right;
+    margin-left: 10px;
+  }
+    
+    .image{
+        height: 150px;
+        margin-right: 50px;
+       margin-top: 20px;
+        margin-bottom: 30px;
+        border-radius: 30px;
+      
+       }
+    
+    .unit{
+        margin-left: 5px;
+        margin-top: 0px; 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 150%;
+        color: black;
+
+    }
+    
+    .button{
+        float: left;
+        margin-left: 20px;
+       justify-content: center;
+     
+       
+        }
+    .button:hover{
+        color: red;
+        padding-left: 5px;
     }
     .enroll{
-        float: right;
-        margin-left: 100px;
+   justify-content: center;
+    margin-left: 600px;
+    margin-top: -300px;
     }
+
+    .custo-image2{
+        margin-left: 50px;
+       
+        
+    }
+    .credit{
+        text-align: center;
+        margin-top: 200px;
+        padding: 10px;
+        font-size: 150%;
+        border-top: solid 1px;
+        background-color: skyblue;
+        
+    }
+    .curriculum{
+        float: right;
+        margin-top: -270px;
+        margin-left: 300px;
+        margin-right: 200px;
+    }
+    .home-btn{
+        
+        margin-bottom: 10px;
+        margin-left: 750px;
+    }
+   
 </style>
 
     

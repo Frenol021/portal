@@ -1,9 +1,10 @@
 @extends('master')
 @section('content')
-<div class="container">
+<div class="container ">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
-            <form action="login" method="POST">
+        <div class="col-sm-15 col-sm-offset-0">
+            <form action="login" method="POST" class="custo">
+                
                 <div class="form-group">
                     <label for="email">email</label>
 
