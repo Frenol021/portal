@@ -32,3 +32,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/enroll', [App\Http\Controllers\HomeController::class, 'enroll'])->name('enroll');
 
 Route::get('curriculum',[App\Http\Controllers\HomeController::class,'curriculum'])->name('curriculum');
+Route::get('removeCurriculum/{id}',[App\Http\Controllers\HomeController::class,'removeCurriculum']);

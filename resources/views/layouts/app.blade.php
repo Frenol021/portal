@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -52,7 +54,7 @@
                                 </li>
                             @endif
                         @else 
-                        <a href="{{url('curriculum')}}" class="head">curriculum[{$count}]</a>
+                        <a href="{{url('curriculum')}}" class="head">curriculum[ ]</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

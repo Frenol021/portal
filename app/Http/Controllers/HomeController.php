@@ -5,6 +5,7 @@ use App\Models\Unit;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,7 @@ class HomeController extends Controller
     {
         $users=Unit::all();
         return view('home',compact('users'));
+        
         
     }
       public function enroll(){
@@ -54,10 +56,15 @@ class HomeController extends Controller
 
    }
    public function curriculum(){
-    $user=Auth::user();
+    $user=Auth::user()->id;
+    $users =Course::query()->where('user_id', $user)->get();
+    
+    return view('curriculum', compact('users'));
 
-    $count =Course::where('user_id', $user->id)->count();
-    return view('curriculum', compact('user'));
-
+   }
+   function removeCurriculum($id)
+   {
+       Course::destroy($id);
+       return redirect('curriculum');
    }
 }
