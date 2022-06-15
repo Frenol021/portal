@@ -51,7 +51,7 @@ class HomeController extends Controller
               'unit_id'=>$unit->id,
             
 ]);
-             return redirect()->back();
+             return redirect()->back()->with('message', 'course added successfully');
       }    
 
    }
@@ -65,6 +65,6 @@ class HomeController extends Controller
    function removeCurriculum($id)
    {
        Course::destroy($id);
-       return redirect('curriculum');
+       return redirect('curriculum')->with('message', 'course removed successfully');
    }
 }

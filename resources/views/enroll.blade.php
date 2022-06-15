@@ -2,6 +2,16 @@
 @section('content')
 @extends('layouts.app')
 <a href="home" class="btn btn-primary head">GO Back</a>
+<div class="card-body">
+                    @if (session('message'))
+                        <div class="alert alert-success"  >
+                          <button type="button" class="close" data-dismiss="alert">x</button>
+                            {{ session('message') }}
+                        </div>
+                    @endif
+
+                   
+                </div> 
 <div class="" >
 @foreach($users as $user)
 <div class=" custo-image2">
@@ -15,12 +25,7 @@
                     @csrf 
                     <input type="hidden" name="user_id" value="{{$user->id}}">
                     
-    
-  
-   
- 
-  
-</form>
+  </form>
 <a href="{{route('add_to_curriculum',$user->id)}}" class=" btn btn-success enroll">Add to curriculum</a>
 
 @endforeach
