@@ -1,5 +1,8 @@
 @extends('master')
+@extends('layouts.app')
 @section('content')
+
+
 <div class="container ">
     <div class="row">
         <div class="col-sm-15 col-sm-offset-0">

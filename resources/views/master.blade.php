@@ -56,16 +56,23 @@
     
     .image{
         height: 150px;
-        margin-right: 50px;
+        margin-right: 100px;
        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         border-radius: 30px;
       
        }
+       .a{
+       background-color: white;
+       }
+
+       .image:hover{
+       background-color: black
+       }
     
     .unit{
-        margin-left: 5px;
-        margin-top: 0px; 
+        margin-left: 20px;
+        margin-top: -10px; 
         font-family: Arial, Helvetica, sans-serif; 
         font-size: 150%;
         color: black;
@@ -103,17 +110,28 @@
         background-color: skyblue;
         
     }
-    .curriculum{
-        float: right;
-        margin-top: -270px;
-        margin-left: 300px;
-        margin-right: 200px;
-    }
+   
     .home-btn{
         
         margin-bottom: 10px;
         margin-left: 750px;
     }
+     .image1{
+        height: 150px;
+        float: left;
+        border-radius: 30px;
+
+      
+       }
+       .un{
+       float: right;
+       margin-bottom: 10px
+       }
+       
+       .custo-image1{
+    float: right;
+    margin-left: 10px;
+  }
    
 </style>
 

@@ -19,31 +19,34 @@ class UnitSeeder extends Seeder
         DB::table('unit')->insert([
             [
             'unit'=>'web development',
-            'image'=> 'https://downloader.la/temp/[Downloader.la]-62a050b5e9624.jpg'
+            'image'=> 'https://downloader.la/temp/[Downloader.la]-62b00f9c5633f.jpg'
             ],
             [
                 'unit'=>'mobile App development',
-                'image'=>'https://downloader.la/temp/[Downloader.la]-62a051f2c3659.jpg'
+                'image'=>'https://downloader.la/temp/[Downloader.la]-62b01191bb431.jpg'
             ],
             [
                 'unit'=>'graphic design',
-                'image'=>'https://downloader.la/temp/[Downloader.la]-62a0588227f58.jpg'
+                'image'=>'https://downloader.la/temp/[Downloader.la]-62b0112661e60.jpg'
             ],
             [
                 'unit'=>'software development',
-                'image'=>'https://downloader.la/temp/[Downloader.la]-62a0598cd0b0c.jpg'
+                'image'=>'https://downloader.la/temp/[Downloader.la]-62b0120296c2f.jpg'
             ],
             [
                 'unit'=>'data analysis',
-                'image'=>'https://downloader.la/temp/[Downloader.la]-62a05c494892b.jpg'
+                'image'=>'https://downloader.la/temp/[Downloader.la]-62b012a2f1e62.jpg'
             ],
             [
                 'unit'=>'cyber security',
-                'image'=>'https://downloader.la/temp/[Downloader.la]-62a05d0338f97.jpg'
-            ]
+                'image'=>'https://downloader.la/temp/[Downloader.la]-62b012eb4279f.jpg'
+            ],
             
-        
-
+            [
+                'unit'=>'web design',
+                'image'=>'https://downloader.la/temp/[Downloader.la]-62b00c87ab71b.jpg'
+            ]
+                
 
         ]);
     }

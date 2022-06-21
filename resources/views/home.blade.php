@@ -6,13 +6,13 @@
     <div class="row justify-content-center header">
         <div class="col-md-12 ">
             <div class="card ">
-                <div class="card-header">{{ __('Dashboard') }}
+                <div class="card-header">{{ __('curriculum') }}
                
                
                 </div>
                
 
-            <div class="card-body">
+            <!--<div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success"  role="alert">
                             {{ session('status') }}
@@ -20,6 +20,16 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                </div> -->
+                <div class="card-body">
+                    @if (session('message'))
+                        <div class="alert alert-success"  >
+                          <button type="button" class="close" data-dismiss="alert">x</button>
+                            {{ session('message') }}
+                        </div>
+                    @endif
+
+                   
                 </div> 
                 <div class="custo">
     <div class="col-sm-4">
@@ -34,7 +44,17 @@
   
   <img class="image" src="{{$user->image}}" alt="">
   
+  
+  
   <h3 class="unit">{{$user->unit}}</h3>
+
+  
+                                
+            <button class="btn-warning button "><a href="{{route('add_to_curriculum',$user->id)}}" >enroll</a></button>
+             
+                                
+    
+  
   
 </div>
  
@@ -42,7 +62,7 @@
  @endforeach
     </div>
 
-    <a href="enroll" class="btn-success button">click here to enroll</a>
+   
 </div>
             </div>
         </div>

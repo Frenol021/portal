@@ -20,6 +20,11 @@ use Illuminate\Support\Facades\Auth;
 Route::get('login', function () {
     return view('login');
 });
+Route::get('logout', function () {
+    Auth::forget('user');
+    $user=Auth::user()->id;
+     return redirect('login');
+ });
 
 Route::post('/login',[UserController::class, 'login']);
 
