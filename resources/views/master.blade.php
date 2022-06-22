@@ -18,6 +18,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
 </head>
 <body>
 
@@ -51,15 +52,31 @@
     
   .custo-image{
     float: right;
-    margin-left: 10px;
+    margin-left: 5px;
+      border: 2px solid white;
+       margin-bottom: 5px;
+       margin-right: 10px;
+       background-color: 	#F0FFF0;
+       padding: 10px
+  }
+  .custo-image:hover{
+  background-color: wheat;
+  cursor: pointer;
+  padding-top: -50px;
+   padding-bottom: -11px;
+    transform: scale(1.05); 
   }
     
     .image{
-        height: 150px;
-        margin-right: 100px;
-       margin-top: 20px;
-        margin-bottom: 50px;
-        border-radius: 30px;
+        height: 200px;
+        transition:height 2s;
+        border-radius: 30px
+        }
+     .image:hover{
+       
+    
+     
+     }  
       
        }
        .a{
@@ -72,7 +89,7 @@
     
     .unit{
         margin-left: 20px;
-        margin-top: -10px; 
+        
         font-family: Arial, Helvetica, sans-serif; 
         font-size: 150%;
         color: black;
@@ -87,8 +104,11 @@
        
         }
     .button:hover{
-        color: red;
-        padding-left: 5px;
+        color: white;
+        padding-left: 20px;
+    }
+    .link{
+       margin-top: 20px;
     }
     .enroll{
    justify-content: center;

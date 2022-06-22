@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Course;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\Mail;
 use function PHPUnit\Framework\returnSelf;
-
+use App\Mail\Email;
 class HomeController extends Controller
 {
     /**
@@ -54,6 +54,11 @@ class HomeController extends Controller
               'unit_id'=>$unit->id,
             
 ]);
+$data = [
+  "name"=>" you have enrolled"
+];
+Mail::to("defenol021@gmail.com")->send(new Email($data));
+
              return redirect()->back()->with('message', 'course added successfully');
       } else{
         return redirect()->back()->with('message', 'you can enroll one course once');
@@ -67,7 +72,7 @@ class HomeController extends Controller
     
     return view('curriculum', compact('users'));
     if($users){
-      return "hello";p
+      return "hello";
    }
     
  
@@ -79,4 +84,13 @@ class HomeController extends Controller
        Course::destroy($id);
        return redirect('curriculum')->with('message', 'course removed successfully');
    }
+   /*function sendEmail(){
+    $data = [
+        "name"=>"hello"
+    ];
+    Mail::to("defenol021@gmail.com")->send(new Email($data));
+
+    $users=Unit::all();
+    return redirect('home')->with('message', 'thanks for enrolling an email has been');
+}*/
 }

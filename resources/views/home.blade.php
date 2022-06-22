@@ -42,7 +42,7 @@
 
 <div class="custo-image">
   
-  <img class="image" src="{{$user->image}}" alt="">
+  <img class=" image" src="{{$user->image}}" alt="">
   
   
   
@@ -50,7 +50,7 @@
 
   
                                 
-            <button class="btn-warning button "><a href="{{route('add_to_curriculum',$user->id)}}" >enroll</a></button>
+            <button class="btn-warning button "><a class="link" href="{{route('add_to_curriculum',$user->id)}}" >enroll</a></button>
              
                                 
     

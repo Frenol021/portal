@@ -5,6 +5,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\Email;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,7 @@ Route::get('logout', function () {
 
 Route::post('/login',[UserController::class, 'login']);
 
+
 Route::get('/registration',[RegistrationController::class,'registration'])->name('registration');
 Route::get('/enroll',[UnitController::class,'enroll']);
 Route::get('add_to_curriculum/{id}',[App\Http\Controllers\HomeController::class,'addToCurriculum'])->name('add_to_curriculum');
@@ -38,3 +42,5 @@ Route::get('/enroll', [App\Http\Controllers\HomeController::class, 'enroll'])->n
 
 Route::get('curriculum',[App\Http\Controllers\HomeController::class,'curriculum'])->name('curriculum');
 Route::get('removeCurriculum/{id}',[App\Http\Controllers\HomeController::class,'removeCurriculum'])->name('removeCurriculum');
+
+Route::get('/enroll', [App\Http\Controllers\HomeController::class,'sendEmail']);
