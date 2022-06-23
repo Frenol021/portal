@@ -7,7 +7,7 @@
     <title>Hello World</title>
 </head>
 <body>
-    <p>Name: {{$data['name']}}</p>
+    <p>{{$data['name']}}</p>
     
 </body>
 </html>

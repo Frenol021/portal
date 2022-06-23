@@ -54,10 +54,10 @@
     float: right;
     margin-left: 5px;
       border: 2px solid white;
-       margin-bottom: 5px;
+       margin-bottom: 50px;
        margin-right: 10px;
-       background-color: 	#F0FFF0;
-       padding: 10px
+       background-color: 	#D0D3D4 ;
+      padding-bottom: 20px
   }
   .custo-image:hover{
   background-color: wheat;
@@ -70,23 +70,12 @@
     .image{
         height: 200px;
         transition:height 2s;
-        border-radius: 30px
+        
         }
-     .image:hover{
-       
-    
-     
-     }  
+  
       
-       }
-       .a{
-       background-color: white;
-       }
 
-       .image:hover{
-       background-color: black
-       }
-    
+     
     .unit{
         margin-left: 20px;
         
@@ -105,53 +94,32 @@
         }
     .button:hover{
         color: white;
-        padding-left: 20px;
+        
     }
     .link{
        margin-top: 20px;
     }
-    .enroll{
-   justify-content: center;
-    margin-left: 600px;
-    margin-top: -300px;
-    }
-
-    .custo-image2{
-        margin-left: 50px;
-       
-        
-    }
-    .credit{
-        text-align: center;
-        margin-top: 200px;
-        padding: 10px;
-        font-size: 150%;
-        border-top: solid 1px;
-        background-color: skyblue;
-        
-    }
    
-    .home-btn{
-        
-        margin-bottom: 10px;
-        margin-left: 750px;
-    }
      .image1{
-        height: 150px;
-        float: left;
-        border-radius: 30px;
-
+       
+    height: 150px
       
        }
        .un{
-       float: right;
-       margin-bottom: 10px
+
        }
        
        .custo-image1{
-    float: right;
+    margin-bottom: 50px;
     margin-left: 10px;
+  
   }
+  .remove{
+ float:right;
+ margin-top: -180px;
+margin-right: 500px;
+  }
+
    
 </style>
 

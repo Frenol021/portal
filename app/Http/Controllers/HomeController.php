@@ -55,9 +55,9 @@ class HomeController extends Controller
             
 ]);
 $data = [
-  "name"=>" you have enrolled"
+  "name"=>" hello thanks for joining shiftech, you have enrolled"
 ];
-Mail::to("defenol021@gmail.com")->send(new Email($data));
+Mail::to("nyawiradwanjohi@gmail.com")->send(new Email($data));
 
              return redirect()->back()->with('message', 'course added successfully');
       } else{
