@@ -54,10 +54,14 @@ class HomeController extends Controller
               'unit_id'=>$unit->id,
             
 ]);
+$name =Auth::user()->name;
+$email =Auth::user()->email;
+$course=Unit::find($id)->unit;
+
 $data = [
-  "name"=>" hello thanks for joining shiftech, you have enrolled"
+  "name"=>" hello  $name thanks for joining shiftech, we have received your enrollment for $course"
 ];
-Mail::to("nyawiradwanjohi@gmail.com")->send(new Email($data));
+Mail::to("$email")->send(new Email($data));
 
              return redirect()->back()->with('message', 'course added successfully');
       } else{
@@ -84,13 +88,5 @@ Mail::to("nyawiradwanjohi@gmail.com")->send(new Email($data));
        Course::destroy($id);
        return redirect('curriculum')->with('message', 'course removed successfully');
    }
-   /*function sendEmail(){
-    $data = [
-        "name"=>"hello"
-    ];
-    Mail::to("defenol021@gmail.com")->send(new Email($data));
 
-    $users=Unit::all();
-    return redirect('home')->with('message', 'thanks for enrolling an email has been');
-}*/
 }
