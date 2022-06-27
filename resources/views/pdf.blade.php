@@ -1,11 +1,10 @@
 @extends('master')
-@section('content')
-    @extends('layouts.app')
+
 
     <div class: "report-container">
 
         <div class= "col-md-10">
-            <h3> shiftech Attachee Report </h3>
+           <h3> shiftech Attachee Report </h3>
 
             
             <table background-color: "red">
@@ -31,7 +30,7 @@
 
             </table>
 
- <a class= "btn btn-danger" href="{{('downloadReport')}}">Download PDF</a>
+
         </div>
     </div>
-@endsection
+

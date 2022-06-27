@@ -40,6 +40,10 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+$app->singleton(\Barryvdh\DomPDF\ServiceProvider::class
+
+);
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,5 +55,6 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+
 
 return $app;

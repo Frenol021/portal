@@ -18,7 +18,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
+<link href="/css/app.css" rel="stylesheet"> 
 </head>
 <body>
 
@@ -119,8 +119,30 @@
  margin-top: -180px;
 margin-right: 500px;
   }
-  
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 200%;
+    
+}
  
+th {
+    border: 2px solid rgb(190, 190, 190);
+    padding: 10px;
+    color: blue:
+}
+
+td {
+    text-align: center;
+    border: 2px solid rgb(200, 200, 200);
+}
+
+.report-container{
+background-color: red;
+margin-left: 500px
+}
 
    
 </style>

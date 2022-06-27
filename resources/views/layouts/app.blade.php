@@ -56,7 +56,7 @@
                                 </li>
                             @endif
                         @else 
-                        <a href="{{url('')}}" class="head">Report</a>
+                        <a href="{{url('report')}}" class="head">Report</a>
                         <a href="{{url('curriculum')}}" class="head">enrollment</a>
 
                             <li class="nav-item dropdown">

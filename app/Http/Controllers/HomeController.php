@@ -43,8 +43,9 @@ class HomeController extends Controller
         
         
         $users = Course::where('unit_id',$id)->first();
-        
-        if(!$users){
+       
+
+        if($users){
           
         $user=Auth::user()->id;
        $unit =Unit::find($id);
