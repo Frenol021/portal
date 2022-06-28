@@ -1,11 +1,11 @@
 @extends('master')
 @section('content')
     @extends('layouts.app')
-
+<a href="home" class="btn btn-primary head">GO Back</a>
     <div class: "report-container">
 
         <div class= "col-md-10">
-            <h3> shiftech Attachee Report </h3>
+            <h3 style= "font-size: 250%; text-align: center;"> <b>shiftech Attachee Report</b> </h3>
 
             
             <table background-color: "red">
@@ -29,9 +29,9 @@
 
 @endforeach
 
-            </table>
+            </table><br><br>
 
- <a class= "btn btn-danger" href="{{('downloadReport')}}">Download PDF</a>
+ <a class= "btn btn-danger button2" href="{{('downloadReport')}}">Download PDF</a>
         </div>
     </div>
 @endsection

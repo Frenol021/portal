@@ -85,7 +85,12 @@
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
-                  
-</body>
+        <section class="footer" style="clear:both">
+ 
+
+    <div class="credit"><b>Developed by <span>Shiftech Africa</b></span></div>
+
+    
+</section>
+  
 </html>

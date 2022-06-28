@@ -1,19 +1,23 @@
 @extends('layouts.app')
 @extends('master')
 @section('content')
-  
+<article class="wrapper">
+  <h2 class="title">Shiftech Africa</h2>
+ 
+</article>
     <div class="container">
-
+ 
         <div class="row justify-content-center header">
 
 
-            <div class="col-md-12 ">
+            <div class="col-md-12 head2">
                 <div class="card ">
-                    <div class="card-header">{{ __('curriculum') }}
+                    <div class="card-header">{{ __('curriculum') }} 
 
 
                     </div>
-<marquee bgcolor="#D0D3D4" width="100%" >Welcome to shiftech Africa we are ready to serve you. </marquee>
+                   
+<marquee bgcolor="#D0D3D4" color="red" width="100%" >Welcome to shiftech Africa we are ready to serve you. </marquee>
                             <!--<div class="card-body">
                             @if (session('status'))
     <div class="alert alert-success"  role="alert">
@@ -33,11 +37,8 @@
 
 
                             </div>
-                            <div class="custo">
-                                <div class="col-sm-4">
-
-
-                                </div>
+                            <div class="container2">
+    
                                 <div class="">
 
                                     @foreach ($users as $user)
@@ -68,4 +69,8 @@
                     </div>
                 </div>
             </div>
+              <!-- footer-->
+
+              
+</body>
         @endsection

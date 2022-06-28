@@ -18,6 +18,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
 <link href="/css/app.css" rel="stylesheet"> 
 </head>
 <body>
@@ -25,16 +26,23 @@
 
 
 
-
 <style>
   
     .container{
-        background-color: wheat;
+        background-color: #A9CCE3 ;
        padding: 10px;
        font-size: 150%;
        padding-top: 10px;
         border-radius: 10px;
         margin-top: 5px;
+    }
+    .container2{
+background-image: url("https://downloader.la/temp/[Downloader.la]-62babe5bd88e5.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+
     }
     .header{
       
@@ -49,6 +57,7 @@
         margin-right: 50px;
       
     }
+
     
   .custo-image{
     float: right;
@@ -102,13 +111,10 @@
    
      .image1{
        
-    height: 150px
+    height: 200px
       
        }
-       .un{
 
-       }
-       
        .custo-image1{
     margin-bottom: 50px;
     margin-left: 10px;
@@ -125,26 +131,87 @@ table {
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: 200%;
+    width:100%
     
 }
  
 th {
     border: 2px solid rgb(190, 190, 190);
     padding: 10px;
-    color: blue:
+    background-color:#76D7C4 ;
 }
 
 td {
     text-align: center;
+    
     border: 2px solid rgb(200, 200, 200);
+color:#424949  ;
 }
 
-.report-container{
-background-color: red;
-margin-left: 500px
+.button2{
+float:right;
 }
 
-   
+.footer{
+ 
+ background-color: wheat  ;
+margin-top:50px;
+
+}
+
+
+.footer .credit{
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-top: 1px solid black;
+    color:black;
+    font-size: 200%;
+}
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
+
+body {
+  background: #fff;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: 'Lobster', cursive;
+}
+
+.wrapper {
+  animation: scroll 70s linear infinite;
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
+  color: #eee;
+  height:20vh;
+  min-width: 30px;
+  width: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  margin-left: 80px;
+  
+}
+
+@keyframes scroll {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 200s linear infinite;
+  }
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+}
 </style>
 
     

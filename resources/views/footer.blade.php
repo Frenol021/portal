@@ -1,1 +1,0 @@
-<!--<div class="credit" style="clear: both;"><b>created by <span>shiftech africa</b></span></div>-->
