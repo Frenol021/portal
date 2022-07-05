@@ -31,6 +31,12 @@
                     <input type="text" name="employer_no" class="form-control" placeholder="enter your employee number">
                 </div>
 
+                                <div class="form-group">
+                    <label for="phone_no">phone_no</label>
+
+                    <input type="number" name="phone_no" class="form-control" placeholder="enter your phone number">
+                </div>
+
                 <div class="form-group">
                     <label for="password">password</label>
 

@@ -27,7 +27,9 @@
 
 
 <style>
-  
+  html{
+ overflow-x: hidden;
+  }
     .container{
         background-color: #A9CCE3 ;
        padding: 10px;
@@ -35,6 +37,7 @@
        padding-top: 10px;
         border-radius: 10px;
         margin-top: 5px;
+       
     }
     .container2{
 background-image: url("https://downloader.la/temp/[Downloader.la]-62babe5bd88e5.jpg");
@@ -55,19 +58,28 @@ background-image: url("https://downloader.la/temp/[Downloader.la]-62babe5bd88e5.
         font-size: 100%;
         border-bottom: none;
         margin-right: 50px;
+        
       
     }
+* {
+  box-sizing: border-box;
+}
 
     
   .custo-image{
     float: right;
-    margin-left: 5px;
-      border: 2px solid white;
-       margin-bottom: 50px;
-       margin-right: 10px;
-       background-color: 	#D0D3D4 ;
-      padding-bottom: 20px
+ 
+margin: 20px;
+     background-size: cover;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #A9CCE3;
+background-color:#D0D3D4;
+  resize: both;
+       
+      
   }
+
   .custo-image:hover{
   background-color: wheat;
   cursor: pointer;
@@ -77,12 +89,12 @@ background-image: url("https://downloader.la/temp/[Downloader.la]-62babe5bd88e5.
   }
     
     .image{
-        height: 200px;
+     
+   resize: both;
         transition:height 2s;
-        
+        width: 100%;
+        height: 75%
         }
-  
-      
 
      
     .unit{
@@ -94,14 +106,17 @@ background-image: url("https://downloader.la/temp/[Downloader.la]-62babe5bd88e5.
 
     }
     
-    .button{
-        float: left;
+    .button {
+   
         margin-left: 20px;
-       justify-content: center;
      
-       
-        }
-    .button:hover{
+     }
+     .button a{
+  text-decoration: none;
+     color: white;
+     
+     }
+    .button:hover {
         color: white;
         
     }
@@ -111,20 +126,29 @@ background-image: url("https://downloader.la/temp/[Downloader.la]-62babe5bd88e5.
    
      .image1{
        
-    height: 200px
+ width: 350px
+
       
        }
 
        .custo-image1{
     margin-bottom: 50px;
     margin-left: 10px;
+    
   
   }
   .remove{
- float:right;
- margin-top: -180px;
-margin-right: 500px;
+display: inline grid;
+
   }
+  .amount{
+color:red;
+float: right;
+font-size:150%;
+margin-right:20px;
+  }
+
+  
 table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
@@ -152,9 +176,50 @@ color:#424949  ;
 float:right;
 }
 
+.box1{
+width: 250px;
+  height:250px;
+  border: 4px solid white;
+  background-color: #1B4F72 ;
+  border-radius: 10px;
+
+}
+
+.box h1{
+color:white;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+  
+}
+.box h2{
+ border-bottom: 1px solid black;
+
+}
+.box span{
+color:blue;
+float: right;
+}
+
+.box .check{
+width: 90%;
+margin-left: 18px;
+
+border-radius:10px;
+graphic design Ksh 300
+remove the enrollment
+
+}
+
+.box .check h3{
+color:white;
+font-size: 250%;
+
+}
 .footer{
  
- background-color: wheat  ;
+ background-color:  #A9CCE3  ;
 margin-top:50px;
 
 }
@@ -183,7 +248,7 @@ body {
   animation: scroll 70s linear infinite;
   background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
   color: #eee;
-  height:20vh;
+  height:15vh;
   min-width: 30px;
   width: 88%;
   display: flex;
@@ -191,7 +256,7 @@ body {
   align-items: center;
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  margin-left: 80px;
+  margin-left: 78px;
   
 }
 
@@ -210,6 +275,93 @@ body {
 @media (min-width: 670px) {
   .title {
     font-size: 5rem;
+  }
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container4 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+inpu[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label4 {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container2 {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn8 {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn8:hover {
+  background-color: #45a049;
+}
+
+span3.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .colr-25 {
+    margin-bottom: 20px;
   }
 }
 </style>

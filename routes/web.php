@@ -44,5 +44,5 @@ Route::get('curriculum',[App\Http\Controllers\HomeController::class,'curriculum'
 Route::get('removeCurriculum/{id}',[App\Http\Controllers\HomeController::class,'removeCurriculum'])->name('removeCurriculum');
 Route::get('report',[App\Http\Controllers\ReportController::class,'report'])->name('report');
 Route::get('/downloadReport',[App\Http\Controllers\ReportController::class,'downloadReport']);
-
+Route::get('checkout',[App\Http\Controllers\HomeController::class,'checkout']);
 

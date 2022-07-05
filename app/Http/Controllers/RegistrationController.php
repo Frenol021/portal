@@ -23,6 +23,8 @@ class RegistrationController extends Controller
             'email'=>$req->email,
             'password'=>Hash::make($req->password),
             'employer_no'=>$req->employer_no,
+            'phone_no'=>$req->phone_no,
+            
             
 
         ]);

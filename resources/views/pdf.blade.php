@@ -1,6 +1,6 @@
 @extends('master')
-@extends('layouts.app')
-@section
+
+
 
     <div class: "report-container">
 
@@ -34,4 +34,4 @@
 
         </div>
     </div>
-@endsection
+
