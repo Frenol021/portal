@@ -85,6 +85,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+        @include('sweetalert::alert')
+
         <section class="footer" style="clear:both">
  
 

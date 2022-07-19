@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('unit', function (Blueprint $table) {
             //
-            $table->string('amount');
+            $table->integer('amount');
         });
     }
 

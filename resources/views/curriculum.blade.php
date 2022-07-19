@@ -2,7 +2,7 @@
 
 @section('content')
     @extends('layouts.app')
-
+@if(count($users))
     <a href="home" class="btn btn-primary head">GO Back</a><br><br>
 
 
@@ -28,7 +28,9 @@
                 <div class="item">
 
 
+
                     @foreach ($users as $user)
+
                         <div class="custo-image1">
 
                             <div class="col-50">
@@ -42,22 +44,26 @@
                                     {{ $unit = \App\Models\Unit::query()->where('id', $user->unit_id)->first()->unit }}
                                     <span>{{ $unit1 = \App\Models\Unit::query()->where('id', $user->unit_id)->first()->amount }}<span>
                                 </h3>
+                                
 
-
- @php $total = $unit1; @endphp
+                             @php $total =$unit1; @endphp
 
 
                                 <a href="{{ route('removeCurriculum', $user->id) }}" class="btn btn-warning remove">remove
                                     the
                                     enrollment</a>
                             </div>
+               
+          
 
                         </div>
                     @endforeach
+
+
                 </div>
             </div>
         </div>
-       
+      
         <div class="col-25">
             <div class="container">
                 <div class="box">
@@ -80,4 +86,8 @@
 
 
     </div>
+    @else
+    <h1> you have not enrolled yet </h1>
+ <a href="home" class="btn btn-warning head1"><h2>click here to enroll</h2></a><br><br>
+@endif
 @endsection

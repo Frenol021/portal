@@ -1,10 +1,12 @@
 @extends('layouts.app')
 @extends('master')
 @section('content')
+
     <article class="wrapper">
         <h2 class="title">Shiftech Africa</h2>
 
     </article>
+
     <div class="container">
 
         <div class="row justify-content-center header">
@@ -58,7 +60,7 @@
                                             href="{{ route('add_to_curriculum', $user->id) }}">enroll</a></button>
 
 
-                                    <span class="amount"><b>{{ $user->amount }}</b></span>
+                                    <span class="amount"><b>ksh {{ $user->amount }}</b></span>
 
 
                                 </div>
@@ -74,5 +76,7 @@
     <!-- footer-->
 
 
+</script>
     </body>
 @endsection
+

@@ -1,8 +1,8 @@
 <?php
 use App\Http\Controllers\MpesaController;
+use FontLib\Table\Type\name;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,8 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::post('v1/access/token', [App\Http\Controllers\MpesaController::class, 'generateAccessToken']);
-Route::post('v1/hlab/stk/push', [App\Http\Controllers\MpesaController::class, 'customerMpesaSTKPush'])->name('lipa');
-Route::post('v1/hlab/validation', [App\Http\Controllers\MpesaController::class, 'mpesaValidation']);
-Route::post('v1/hlab/transaction/confirmation', [App\Http\Controllers\MpesaController::class, 'mpesaConfirmation']);
-Route::post('v1/hlab/register/url', [App\Http\Controllers\MpesaController::class, 'mpesaRegisterUrls']);
+ 
+Route::get('/user', [MpesaController::class, 'test'])->name('test');
+Route::get('v1/access/token', [App\Http\Controllers\MpesaController::class, 'generateAccessToken']);
+Route::get('payment', [App\Http\Controllers\MpesaController::class, 'customerMpesaSTKPush'])->name('lipa');
+Route::get('v1/hlab/validation', [App\Http\Controllers\MpesaController::class, 'mpesaValidation']);
+Route::get('confirmation', [App\Http\Controllers\MpesaController::class, 'mpesaConfirmation']);
+Route::get('v1/hlab/register/url', [App\Http\Controllers\MpesaController::class, 'mpesaRegisterUrls']);

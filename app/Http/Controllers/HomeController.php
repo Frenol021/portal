@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
 use function PHPUnit\Framework\returnSelf;
 use App\Mail\Email;
+
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 class HomeController extends Controller
 {
     /**
@@ -42,19 +46,27 @@ class HomeController extends Controller
 
         
         
-        $users = Course::where('unit_id',$id)->first();
-       
+        $users = Course::where('user_id' ,$id)->first();
+  
 
-        if(!$users){
-          
+        if($users){
+
+          Alert::warning('heey', 'you can just enroll once');
+          return redirect()->back();
+
+
+      } else{
         $user=Auth::user()->id;
        $unit =Unit::find($id);
+      
             $id=$unit->id;
-           $enroll=Course::create([
+          
+           $uni=Course::create([
             'user_id'=>$user,
               'unit_id'=>$unit->id,
-            
+              
 ]);
+
 $name =Auth::user()->name;
 $email =Auth::user()->email;
 $course=Unit::find($id)->unit;
@@ -63,10 +75,8 @@ $data = [
   "name"=>" hello  $name thanks for joining shiftech, we have received your enrollment for $course"
 ];
 Mail::to("$email")->send(new Email($data));
-
-             return redirect()->back()->with('message', 'course added successfully');
-      } else{
-        return redirect()->back()->with('message', 'you can enroll one course once');
+Alert::success('thanks for enrolling', 'an email has been sent to you');
+             return redirect()->back();
       }
       
    }
@@ -74,32 +84,28 @@ Mail::to("$email")->send(new Email($data));
     
     $user=Auth::user()->id;
     $users =Course::query()->where('user_id', $user)->get();
-    
+  
     return view('curriculum', compact('users'));
-    if($users){
-      return "hello";
-   }
-    
- 
+
 
    }
+   
    function removeCurriculum($id)
    {
     
        Course::destroy($id);
-       return redirect('curriculum')->with('message', 'course removed successfully');
-   }
+       
+       Alert::success('enrollment', 'removed successfully');
 
-   public function amount()
-   {
-    $tota=0; 
+       return redirect('curriculum');
 
-    
    }
 
    public function checKout()
    {
-    return view('checkout1');
+    $user=Auth::user()->id;
+    $users =Course::query()->where('user_id', $user)->get();
+    return view('checkout1', compact('users'));
    }
 
 }

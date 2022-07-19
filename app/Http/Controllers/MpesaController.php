@@ -5,13 +5,35 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Carbon\Carbon;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Transact;
-
+use Illuminate\Support\Facades\Auth;
+use App\Models\Unit;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MpesaController extends Controller
 {
     //
+   /* public function test(Request $id){
+        
+        $phon=User::first('phone_no');
+
+        $id=$phon->name;
+    dd($phon);
+        $phone = Auth::user()->phone_no;
+    }*/
+
+    public function lipaNaMpesaPassword()
+    {
+        $lipa_time = Carbon::rawParse('now')->format('YmdHms');
+        $passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
+        $BusinessShortCode = 174379;
+        $timestamp =$lipa_time;
+        $lipa_na_mpesa_password = base64_encode($BusinessShortCode.$passkey.$timestamp);
+        return $lipa_na_mpesa_password;
+    }
+
     public function generateAccessToken()
     {
         $consumer_key="SGEsw3hgzcIW8W8J2h1IWphVIrA3ciuC";
@@ -28,21 +50,23 @@ class MpesaController extends Controller
         $access_token=json_decode($curl_response);
         return $access_token->access_token;
     }
-    public function lipaNaMpesaPassword()
-    {
-        $lipa_time = Carbon::rawParse('now')->format('YmdHms');
-        $passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
-        $BusinessShortCode = 174379;
-        $timestamp =$lipa_time;
-        $lipa_na_mpesa_password = base64_encode($BusinessShortCode.$passkey.$timestamp);
-        return $lipa_na_mpesa_password;
-    }
+
     /**
      * Lipa na M-PESA STK Push method
      * */
     public function customerMpesaSTKPush()
     {
+     
+        
        
+       $phone = User::first()->phone_no;
+       
+        $formatedPhone = substr($phone, 0);
+        $code = "254";
+        $phoneNumber = $code.$phone;
+        $amount =Unit::first()->amount;
+ 
+
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -53,28 +77,27 @@ class MpesaController extends Controller
             'Password' => $this->lipaNaMpesaPassword(),
             'Timestamp' => Carbon::rawParse('now')->format('YmdHms'),
             'TransactionType' => 'CustomerPayBillOnline',
-            'Amount' => 2,
-            'PartyA' => 254790698026, 
+            'Amount' => 1,
+            'PartyA' => $phoneNumber, 
             'PartyB' => 174379,
-            'PhoneNumber' => 254790698026, 
-            'CallBackURL' => 'https://blog.hlab.tech/',
+            'PhoneNumber' => $phoneNumber, 
+            'CallBackURL' => 'https://a987-197-237-135-110.in.ngrok.io/api/confirmation',
             'AccountReference' => "shiftech Africa",
             'TransactionDesc' => "payment for enrollment "
         ];
         $data_string = json_encode($curl_post_data);
+      
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
         $curl_response = curl_exec($curl);
-        return $curl_response;
+
+        Alert::success('payment done', 'you did your payment successfully');
+
+        return "payment done";
     }
-    public function createValidationResponse($result_code, $result_description){
-        $result=json_encode(["ResultCode"=>$result_code, "ResultDesc"=>$result_description]);
-        $response = new Response();
-        $response->headers->set("Content-Type","application/json; charset=utf-8");
-        $response->setContent($result);
-        return $response;
-    }
+
+   
     /**
      *  M-pesa Validation Method
   
@@ -85,6 +108,15 @@ class MpesaController extends Controller
         $result_description = "Accepted validation request.";
         return $this->createValidationResponse($result_code, $result_description);
     }
+
+    public function createValidationResponse($result_code, $result_description){
+        $result=json_encode(["ResultCode"=>$result_code, "ResultDesc"=>$result_description]);
+        $response = new Response();
+        $response->headers->set("Content-Type","application/json; charset=utf-8");
+        $response->setContent($result);
+        return $response;
+    }
+    
     /**
      * M-pesa Transaction confirmation method, we save the transaction in our databases
      */
@@ -93,6 +125,7 @@ class MpesaController extends Controller
     {
      
         $content=json_decode($request->getContent());
+        dd($content);
         $mpesa_transaction = new Transact();
         $mpesa_transaction->TransactionType = $content->TransactionType;
         $mpesa_transaction->TransID = $content->TransID;
@@ -120,15 +153,16 @@ class MpesaController extends Controller
     public function mpesaRegisterUrls()
     {
         $curl = curl_init();
+     
         curl_setopt($curl, CURLOPT_URL, 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl');
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json','Authorization: Bearer '. $this->generateAccessToken()));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(array(
-            'ShortCode' => "600141",
+            'ShortCode' => "600988",
             'ResponseType' => 'Completed',
-            'ConfirmationURL' => "https://blog.hlab.tech/api/v1/hlab/transaction/confirmation",
-            'ValidationURL' => "https://blog.hlab.tech/api/v1/hlab/validation"
+            'ConfirmationURL' => "https://a987-197-237-135-110.in.ngrok.io/api/confirmation",
+            'ValidationURL' => "https://a987-197-237-135-110.in.ngrok.io/api/v1/hlab/validation"
         )));
         $curl_response = curl_exec($curl);
         echo $curl_response;

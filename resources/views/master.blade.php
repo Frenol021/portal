@@ -23,6 +23,7 @@
 </head>
 <body>
 
+@include('sweetalert::alert')
 
 
 
@@ -120,8 +121,9 @@ background-color:#D0D3D4;
         color: white;
         
     }
-    .link{
-       margin-top: 20px;
+    .col-md-4{
+ 
+       font-size:150%;
     }
    
      .image1{
@@ -142,7 +144,7 @@ display: inline grid;
 
   }
   .amount{
-color:red;
+color:#000066;
 float: right;
 font-size:150%;
 margin-right:20px;
@@ -217,10 +219,41 @@ color:white;
 font-size: 250%;
 
 }
+
+     .image2{
+       
+ width: 150px
+
+       }
+
+       .custo-image2{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+  
+  }
+h1{
+
+text-align: center;
+font-size: 140;
+}
+    .head1{
+        margin-left:20px;    
+        margin-top: 13px;
+        font-size: 100%;
+        border-bottom: none;
+        margin-right: 50px;
+      text-align: center;
+       justify-content: center;
+        
+      
+    }
+
 .footer{
  
  background-color:  #A9CCE3  ;
 margin-top:50px;
+
 
 }
 
@@ -232,6 +265,7 @@ margin-top:50px;
     border-top: 1px solid black;
     color:black;
     font-size: 200%;
+
 }
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
 
@@ -248,7 +282,7 @@ body {
   animation: scroll 70s linear infinite;
   background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
   color: #eee;
-  height:15vh;
+  height:20vh;
   min-width: 30px;
   width: 88%;
   display: flex;
