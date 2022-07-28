@@ -238,6 +238,7 @@ text-align: center;
 font-size: 140;
 }
     .head1{
+    float:center;
         margin-left:20px;    
         margin-top: 13px;
         font-size: 100%;
@@ -398,6 +399,58 @@ span3.price {
     margin-bottom: 20px;
   }
 }
+.accordion-body{
+background-color: #FDEDEC  ;
+font-size: 200%;
+}
+h2{
+
+text-align: center;
+margin-top:20px;
+font-family:Sans-serif;
+}
+.accordion-body h3{
+color: #85C1E9;
+font-size: 100%;
+}
+.graphic{
+margin-left: 30px;
+
+}
+.android{
+
+background-image: url("storage/images/android.jpg");
+padding-bottom:20px;
+}
+
+.cyber{
+
+background-image: url("storage/images/cyber.jpg");
+padding-bottom: 200px;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+}
+.design{
+
+background-image: url("storage/images/design.png");
+padding-bottom: 280px;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+}
+.software{
+
+background-image: url("storage/images/software.png");
+padding-bottom: 280px;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+}
+
 </style>
 
     

@@ -81,7 +81,7 @@ class MpesaController extends Controller
             'PartyA' => $phoneNumber, 
             'PartyB' => 174379,
             'PhoneNumber' => $phoneNumber, 
-            'CallBackURL' => 'https://a987-197-237-135-110.in.ngrok.io/api/confirmation',
+            'CallBackURL' => 'https://0f32-197-237-135-110.in.ngrok.io/api/confirmation',
             'AccountReference' => "shiftech Africa",
             'TransactionDesc' => "payment for enrollment "
         ];
@@ -94,7 +94,7 @@ class MpesaController extends Controller
 
         Alert::success('payment done', 'you did your payment successfully');
 
-        return "payment done";
+        return redirect()->away('http://127.0.0.1:8000/graphic');
     }
 
    
@@ -125,7 +125,7 @@ class MpesaController extends Controller
     {
      
         $content=json_decode($request->getContent());
-        dd($content);
+     
         $mpesa_transaction = new Transact();
         $mpesa_transaction->TransactionType = $content->TransactionType;
         $mpesa_transaction->TransID = $content->TransID;
@@ -161,8 +161,8 @@ class MpesaController extends Controller
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(array(
             'ShortCode' => "600988",
             'ResponseType' => 'Completed',
-            'ConfirmationURL' => "https://a987-197-237-135-110.in.ngrok.io/api/confirmation",
-            'ValidationURL' => "https://a987-197-237-135-110.in.ngrok.io/api/v1/hlab/validation"
+            'ConfirmationURL' => "https://0f32-197-237-135-110.in.ngrok.io/api/confirmation",
+            'ValidationURL' => "https://0f32-197-237-135-110.in.ngrok.io/api/v1/hlab/validation"
         )));
         $curl_response = curl_exec($curl);
         echo $curl_response;

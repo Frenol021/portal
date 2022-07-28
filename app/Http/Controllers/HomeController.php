@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
 use function PHPUnit\Framework\returnSelf;
 use App\Mail\Email;
-
+use phpDocumentor\Reflection\PseudoTypes\False_;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -44,11 +45,11 @@ class HomeController extends Controller
       }
       public function addToCurriculum($id){
 
-        
-        
-        $users = Course::where('user_id' ,$id)->first();
-  
+        $user=Auth::user()->id;
+   
+        $users =Course::where('user_id', $user)->first();
 
+   
         if($users){
 
           Alert::warning('heey', 'you can just enroll once');
@@ -56,9 +57,9 @@ class HomeController extends Controller
 
 
       } else{
-        $user=Auth::user()->id;
+       
        $unit =Unit::find($id);
-      
+     
             $id=$unit->id;
           
            $uni=Course::create([

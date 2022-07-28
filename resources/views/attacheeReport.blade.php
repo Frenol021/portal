@@ -1,6 +1,7 @@
 @extends('master')
 @section('content')
     @extends('layouts.app')
+    @if(count($units))
 <a href="home" class="btn btn-primary head">GO Back</a>
     <div class: "report-container">
 
@@ -34,4 +35,10 @@
  <a class= "btn btn-danger button2" href="{{('downloadReport')}}">Download PDF</a>
         </div>
     </div>
+    
+    @else
+        <h1>No student enrolled</h1>
+         <a href="home" class="btn btn-warning head1"><h2>go back</h2></a><br><br>
+    @endif
+
 @endsection

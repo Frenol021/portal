@@ -90,8 +90,8 @@
 
                     </a><hr>
 
-                                        <a href="home" class="btn btn-warning check">
-                        <h3>add courses ? </h3>
+                                        <a href="curriculum" class="btn btn-warning check">
+                        <h3>need modification ? </h3>
 
                     </a>
                 </div>

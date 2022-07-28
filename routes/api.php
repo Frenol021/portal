@@ -24,6 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/user', [MpesaController::class, 'test'])->name('test');
 Route::get('v1/access/token', [App\Http\Controllers\MpesaController::class, 'generateAccessToken']);
 Route::get('payment', [App\Http\Controllers\MpesaController::class, 'customerMpesaSTKPush'])->name('lipa');
-Route::get('v1/hlab/validation', [App\Http\Controllers\MpesaController::class, 'mpesaValidation']);
+Route::get('validation', [App\Http\Controllers\MpesaController::class, 'mpesaValidation']);
 Route::get('confirmation', [App\Http\Controllers\MpesaController::class, 'mpesaConfirmation']);
-Route::get('v1/hlab/register/url', [App\Http\Controllers\MpesaController::class, 'mpesaRegisterUrls']);
+Route::get('register/url', [App\Http\Controllers\MpesaController::class, 'mpesaRegisterUrls']);

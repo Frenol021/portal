@@ -20,11 +20,10 @@ use App\Mail\Email;
 |
 */
 
-Route::get('login', function () {
-    return view('login');
-});
+
 Route::get('logout', function () {
-    Auth::forget('user');
+   Auth::forget('user');
+
     $user=Auth::user()->id;
      return redirect('login');
  });
@@ -45,4 +44,9 @@ Route::get('removeCurriculum/{id}',[App\Http\Controllers\HomeController::class,'
 Route::get('report',[App\Http\Controllers\ReportController::class,'report'])->name('report');
 Route::get('/downloadReport',[App\Http\Controllers\ReportController::class,'downloadReport']);
 Route::get('checkout',[App\Http\Controllers\HomeController::class,'checkout']);
-
+Route::get('graphic',[App\Http\Controllers\ProgramController::class,'program']);
+Route::get('mobile',[App\Http\Controllers\ProgramController::class,'mobile']);
+Route::get('security',[App\Http\Controllers\ProgramController::class,'cyber']);
+Route::get('design',[App\Http\Controllers\ProgramController::class,'design']);
+Route::get('data',[App\Http\Controllers\ProgramController::class,'data']);
+Route::get('software',[App\Http\Controllers\ProgramController::class,'software']);
