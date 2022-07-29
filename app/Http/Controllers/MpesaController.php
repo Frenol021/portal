@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Carbon\Carbon;
@@ -57,15 +58,15 @@ class MpesaController extends Controller
     public function customerMpesaSTKPush()
     {
      
-        
        
+
        $phone = User::first()->phone_no;
-       
+       dd($phone);
         $formatedPhone = substr($phone, 0);
         $code = "254";
         $phoneNumber = $code.$phone;
         $amount =Unit::first()->amount;
- 
+      
 
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
         $curl = curl_init();
@@ -77,7 +78,7 @@ class MpesaController extends Controller
             'Password' => $this->lipaNaMpesaPassword(),
             'Timestamp' => Carbon::rawParse('now')->format('YmdHms'),
             'TransactionType' => 'CustomerPayBillOnline',
-            'Amount' => 1,
+            'Amount' => $amount,
             'PartyA' => $phoneNumber, 
             'PartyB' => 174379,
             'PhoneNumber' => $phoneNumber, 
@@ -86,15 +87,23 @@ class MpesaController extends Controller
             'TransactionDesc' => "payment for enrollment "
         ];
         $data_string = json_encode($curl_post_data);
-      
+        
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
         $curl_response = curl_exec($curl);
 
         Alert::success('payment done', 'you did your payment successfully');
+        if($amount == 200){
+           
+            return redirect()->away('http://127.0.0.1:8000/design');
+        }elseif($amount == 300){
+            return redirect()->away('http://127.0.0.1:8000/graphic');
 
-        return redirect()->away('http://127.0.0.1:8000/graphic');
+        }else{
+            return "hellooo";
+        }
+        
     }
 
    

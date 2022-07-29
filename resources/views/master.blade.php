@@ -451,6 +451,12 @@ background-attachment: fixed;
 
 }
 
+.whatsapp{
+bottom: 10px;
+left: 10px;
+position: fixed;
+}
+
 </style>
 
     

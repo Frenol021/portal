@@ -450,6 +450,27 @@
           </div>
           
     </div>
+
+    <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/62e2819e54f06e12d88bc592/1g92ckltj';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+<!--End of Tawk.to Script-->
     
+  <!--  <div class = "whatsapp">
+    <a href="https://wa.me/254790698026?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">
+    <img src="{{ URL('storage/images/whatsapp.png') }}" alt="" title="" width="120" height="100" >
+    </a>
     
+    </div> -->
+
+
 @endsection
