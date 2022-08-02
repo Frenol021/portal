@@ -1,14 +1,13 @@
 @extends('master')
 
-@section('content')
-    @extends('layouts.app')
+
 
     <h1>Adobe CC Design</h1>
 
-   <div class = "graphic">
-   <img src="{{ URL('storage/images/Adobe.png') }}" alt="" title="" width="100" height="100">
+   <div class = "design">
+   <!--<img src="{{ URL('storage/images/Adobe.png') }}" alt="" title="" width="100" height="100">
     <img src="{{ URL('storage/images/illusrator.jpg') }}" alt="" title="" width="250" height="130">
-    <img src="{{ URL('storage/images/photoshop.png') }}" alt="" title="" width="100" height="100" >
+    <img src="{{ URL('storage/images/photoshop.png') }}" alt="" title="" width="100" height="100" >-->
     </div>
 
     <h2><b>table of content</b></h2>
@@ -18,33 +17,67 @@
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <h3>1.introduction</h3>
+                    <h3>1. WEB DESIGN: BASICS</h3>
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                 data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><p>This book is made for students who would like to learn the basics of the three primary Adobe design applications</p>
-                  <p>The way the book does this is by introducing and ex-
-                      plaining the applications in a logical way that builds
-                      upon what is previously learned These applications
-                      present a bewildering array of buttons and gadgets
-                      that are overwhelming to the new user This book
-                      makes sense of it all, not showing how everything
-                      works, but instead giving a foundation and a path to
-                      learn about all those bewildering buttons and gad-
-                      gets
+                <div class="accordion-body">
+                  <p>
+                    The Web is another very powerful communication mode of recent
+                    origin. It has turned out to be an increasingly important resource of
+                    encompassing all conceivable aspects of human life like business,
+                    education, entertainment, governance, personal life, health and what not.
+                    Web sites are hosted by anyone including individuals,
+                    organisations, business enterprises, and voluntary organisations etc.
+                    who have an interest in telling the world about themselves or about
+                    their products/services.
                   </p>
                   <p>
-                    The steps in this book look a bit like tutorials Like
-                      with tutorials, you should work in the applications
-                      as you follow along with the reading, even when not
-                      speciically instructed to do so Unlike tutorials, the
-                      steps in this book present the information in a way
-                      that is geared to having you actually learn the ma-
-                      terial, not just a list of steps to get something that
-                      looks decent
+                    Web site is a site or set of files stored on the World Wide Web.
+                    It is viewed with a browser like Microsoft Internet Explorer, Firefox,
+                    Safari or Netscape. Each Web site contains a home page (the main
+                    page which users see when they enter the site) and additional
+                    documents and files. The sites are owned and managed by individuals
+                    or organisations or companies to promote their interests.
+                    The pages of a Web site can usually be accessed from the
+                    homepage or otherwise called Uniform Resource Locator (URL). The
+                    browser (the user‘s application to access homepage)
                    </p>
-                   
+                 <h3><b>Static and Dynamic Web Sites</b></h3>  
+                 <p>
+                 In static Web site the information is displayed in the same format
+                    as they are stored in the server. Such information is primarily coded in
+                    HTML (and the address ends in .htm). Most of the Web sites are static
+                    as they present pre-defined, static information, in the sense the pages
+                    retrieved by different users at different times remain the same. To
+                    make a change to the content, the files need to be manually opened,
+                    data changed and the new version should be uploading to the Web.<br>
+                    Dynamic Web site pages are ones that retrieves fresh information
+                    each time you view (like the latest news you see or various games you
+                    play on the Web). How one retrieves examination at MPBOU site
+                    may cited as an example. The ‗Examination Results‘ button at
+                    www.bhojvirtual university.com/ can be described as dynamically
+                    built because it supplies different information (marks) to different
+                    students when the candidates search by entering their enroll numbers.
+                    The information, in fact, doesn‘t come from html pages but from
+                    databases (which may be updated minute by minute, day or week).
+                 </p>
+                 <h3><b>Where and How to host your Web Site</b></h3> 
+                 <p>
+                 Web hosting can be free or paid. There are many agencies
+                (Internet Service Providers) that provide you with free hosting
+                facility. The drawbacks of free hosting are that the traffic/visibility of
+                the site could be poor as the natural search engines won‘t place/rank
+                you well. Besides, the ISPs tend to place advertisements on your
+                Web site to cover their expenses which may not be to your liking.
+                Another alternative is to host the Web site on your own server.
+                Organisations that have steady IT set-up resort to this. The third
+                option is to share a multiple Web hosting package against payment
+                (which is not much expensive now-a-days).[Multiple domain hosting
+                packages can be viewed and selected from the Internet to choose the
+                one that suits you).
+                 </p>
                 </div>
             </div>
         </div>
@@ -53,60 +86,49 @@
             <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <h3>2. The application</h3>
+                    <h3>2. COMPOSING AND SHAPING OF WEB TEXT</h3>
                 </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body"><h3><b>Adobe Illustrator</b></h3>
                 <p>
-                  Illustrator is for designs You see things done with
-                  the application every day Logos Magazine and
-                  newspaper advertisements (on the web or on pa-
-                  per) Charts and graphs done by designers Instruc-
-                  tions for everything and anything Signs Many
-                  things in this book The list goes on
+                    Designing and creation of a Web page is like production of a book. It’s a
+                    creative work, involving many a task like writing, maintenance of style,
+                    designing, adding of pictures and graphs, and shaping up the appearance.
+                    In the same line, the Web page offers scope for conveying and
+                    communicating information using a variety of options including text,
+                    graphics, photos, video, sound, animation, and link to other sites. In this
+                    Unit, we shall, however, confine to discussion on composing and shaping of Web text.
                 </p>
+
+                <h3><b>Readers’ Approach to Online Pages</b></h3>
                 <p>
-                Illustrator is the application you want to use when-
-                ever you have some design challenges or want
-                something that looks just right Its language is vec-
-                tor drawing, so anything you make in it will retain its
-                quality at any size Go ahead and open up Illustrator,
-                go to File / New, and igure out how to draw a circle
-                (click and hold down on rectangle tool to ind the
-                circle tool) or some other shape Then with the mag-
-                nifying glass, zoom in repeatedly See? No change in
-                quality no matter how much you enlarge it
+                    Reading habit of Web users should be kept in mind while writing the
+                    text. Before reading a book in full, a reader would have already made a
+                    cursory look and determined to go ahead. However, the case of Web
+                    reading is different. He is not sure whether any among the plethora of sites
+                    he visits and documents therein will be relevant to his requirement.
+                    Hence, he will not spend time going through every document in Web sites.
+                    As a result, strategies have been evolved in quickly assessing the Web
+                    sites as to whether the Web in question serves his purpose. If anyone is
+                    found useful/relevant, he will settle down to read the item page by page.
+                    We shall discuss in this section some of the strategies.
                 </p>
-                <h3><b>Adobe Photoshop</b></h3>
-                <p>
-                Photoshop is a bitmap application, meaning it is
-                good for things like Aunt Judy, or just about anything
-                with continuous ranges of tones like photographs
-                Photoshop uses the graph paper-like way of drawing,
-                which means that unless the squares of the graph
-                paper you happen to be using are not small enough,
-                those squares (pixels) are going to be visible to the
-                naked eye
-                </p>
-                 <h3><b>Adobe InDesign</b></h3>
+                 <h3><b>Textual Elements of Web Page: Guidelines</b></h3>
                  <p>
-                 InDesign is the application you should use if you
-                have multiple pages to lay out or need very ine au-
-                tomatic control over typography Like Illustrator, it
-                is also a vector-based application, so things made
-                with it look good at any size Actually, InDesign is so
-                much like Illustrator that students will sometimes
-                open the wrong application and work in it for a while
-                before they realize it
+                    It is an accepted fact that reading online takes more time than
+                    otherwise. According to a study conducted by Jakob Nielsen of the Nielsen
+                    Norman Group, reading a book on any electronic devices whether it’s
+                    Kindle or iPad, takes longer time than reading the standard paper version
+                    of the same book. Also one is not sure what he reads will be of use at the
+                    end. Hence most online readers are compulsory scanners or skimmers who
+                    skim Web pages rather than the read word-by-word. Even systematic
+                    readers also would love to have special online reading structures in the text
+                    so that they do not have to slow down picking their way through the pages.
                 </p>
-                <p>
-                InDesign is used to do magazines, newspapers, bro-
-                chures, and books Any designs that have multiple
-                pages, even when those are viewed on the screen.
-                </p>
-                <h3><b>All Together Now</b></h3>
+
+                <h3><b>Use of Passive Voice</b></h3>
                 <p>
                 In actual practice these three programs are used to-
                 gether much of the time So a book like this will be
@@ -116,13 +138,14 @@
                 tions like the circle a few pages back are made in
                 Illustrator and likewise placed into InDesign
                 </p>
-                <p>
-                These are the exact same applications that are used
-                by designers working for the largest brands across
-                the world They are excellent tools that have devel-
-                oped into intuitive and lexible ways of communicat-
-                ing.
-                </p>
+                    Use of passive voice in Web writing provides an edge over active voice.
+                    Passive voice directly represents action which enhances scanability. To
+                    illustrate this point, take the example of M/s Godrej Company that
+                    supplies library stacks. Let us frame the statement in the following ways:
+                    ‘M/s Godrej supplies library stacks’ (active voice) and ‘Library stacks are
+                    supplied by M/s Godrej’ (passive voice). You will notice that the latter
+                    (passive voice) focuses on the library stacks and readers can arrive at
+                    ‘library stacks’ (the library is interested in the stacks than the supplier)easily.
                 </div>
             </div>
         </div>
@@ -131,17 +154,19 @@
             <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    <h3>3. illustrator basic</h3>
+                    <h3>3. Creating and Using Art on the Web</h3>
                 </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                 <p>
-                This chapter introduces the Illustrator workspace and leads you through the making of simple shapes. There is a lot of information, but none of it should be particularly diicult.
-                Please learn it well. Just about everything from this chapter will be used in future chapters. For example: In this chapter, the concept of using the shift key to keep things in proportion or lined-up is covered. 
-                The shift key is used across most tools and throughout Illustrator, Photoshop, and InDesign for very much the same thing. If you miss it in the irst chapter, you will ind life
-                diicult in subsequent chapters. If you are new to Illustrator it might be good to work through this chapter more than once. Most of the information is very much like that shift key.
+                    In this unit, we simplify the topic of Web graphics. In a perfect world, we‘d dedicate
+                    pages and pages to the nuances of using graphics on the Web (mostly because we like
+                    graphics), but then you‘d never get to the rest of the lessons. We also don‘t want you to feel
+                    overwhelmed when it comes to using Web graphics. As you might have discovered, you can
+                    easily find an overabundance of information about advanced graphics by looking on the
+                    Internet and in bookstores everywhere.
                 </p>
                 <h3><b>The Workspace</b></h3>
                 <p>
@@ -177,64 +202,80 @@
             <h2 class="accordion-header" id="flush-headingfour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                    <h3>4. illustrator path</h3>
+                    <h3>4. HTML: Hypertext Markup Language</h3>
                 </button>
             </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                 <p>
-                One of the most important but puzzling things to learn in Illustrator is the making and editing of vector shapes. These are the shapes that are native to Illustrator, but
-                they are also used in many other applications, from presentation software to CAD software (as well as in Photoshop and InDesign). They are used for logos, simple
-                drawings, technical drawings, and many other things.They can be enlarged or reduced ininitely with no loss of quality. They take very little disk space and remain
-                able to be modiied. If you learn how to deal with these shapes efectively you will be rewarded many times over in the future.
+                    The first publicly available description of Hypertext Markup Language was a document
+                    called HTML Tags, first mentioned on the Internet by Berners-Lee in late 1991. It describes
+                    20 elements comprising the initial, relatively simple design of HTML. HTML is a text and
+                    image formatting language used by web browsers to dynamically format web pages. Many of
+                    the text elements are found in the 1988 and Berners-Lee considered HTML to be an
+                    application of SGML. It was formally defined as such by the Internet Engineering Task Force
+                    (IETF) with the mid-1993 publication of the first proposal for an HTML specification,
+                    "Hypertext Markup Language (HTML)". Further development under the auspices of the IETF
+                    was stalled by competing interests. Since 1996, the HTML specifications have been
+                    maintained, with input from commercial software vendors, by the World Wide Web
+                    Consortium (W3C). However, in 2000, HTML also became an international standard
+                    (ISO/IEC 15445:2000).
                 </p>
-                <h3><b>Corner & Smooth Anchor Points</b></h3>
+                <h3><b>DYNAMIC HTML</b></h3>
                 <p>
-                Vector shapes are drawings that are deined by points and lines connecting these points You already made some early in the last chapter by drawing a line with the pen tool You deined the location
-                of the start of a line by clicking, and then deined the location of the end of a line by clicking again Using the stroke and ill panels you then told Illustrator what size and color to make the line
-                The points that you made by clicking with the pen tool are called corner anchor points Lines coming from these points are straight There is one other type of line called a smooth anchor point Lines
-                coming from these points come out at a curve To make one of these, irst make a corner anchor pointby clicking with the pen tool, then instead of clicking
-                where you want the line to go, click and drag a bitbefore you let go of the mouse button.
+                    The Dynamic HTML is a collective term for a combination of new Hypertext Markup
+                    Language (HTML) tags and options that will let you create web pages more animated and
+                    more responsive to user interaction than previous versions of HTML. Much of dynamic
+                    HTML is specified in HTML 4.0. Simple examples of dynamic HTML pages would include
+                    (1) having the color of a text heading change when a user passes a mouse over it or (2)
+                    allowing a user to ―drag and drop‖ an image to another place on a web page. Dynamic HTML
+                    can allow web documents to look and act like desktop applications or multimedia
+                    productions.
                 </p>
-                <h3><b>Rulers & Guides</b></h3>
+                <h3><b>FILE TRANSFER PROTOCOL (FTP)</b></h3>
                 <p>
-                Rulers are a crucial part of any design application. All designs are inalized by the eye, but irst organized by dimensions How else would you ind the
-                center of your page for example? To bring out rulers in Illustrator, go to View / Rulers / Show Rulers The rulers will show up on the top and left side of your
-                window and will be in whatever units you have set in Illustrator / Preferences / Units The rulers start from the upper left of the document, but you can change the origin by dragging the little square where
-                the rulers meet (very subtle!) to anywhere in the document You can reset the zero point of the rulers by double-clicking on that little square
+                    FTP is a standard Internet protocol. It is the simplest way to exchange files between
+                    computers on the Internet. Like the Hypertext Transfer Protocol (HTTP), which transfers
+                    displayable web pages and related files, and the Simple Mail Transfer Protocol (SMTP),
+                    which transfers e-mail, FTP is an application protocol that uses the Internet's TCP/IP
+                    protocols. FTP is commonly used to transfer web page files from their creator to the
+                    computer that acts as their server for everyone on the Internet. It‘s also commonly used to
+                    download programmes and other files to your computer from other servers.
                 </p>
-                 <h3><b>Scaling & Rotating Objects</b></h3>
+                 <h3><b>SUMMARY</b></h3>
                  <p>
-                 After you make a shape in Illustrator, you will probably want to change the size of it One of the really cool things about vector drawing is that no matter how large or small you make something its quality
-                  and level of detail will remain the same. The irst way of scaling is the most direct First go to View / Show or Hide Bounding Box to make sure the
-                  bounding box is showing If it is showing the menu item will read ‘Hide Bounding Box’ If you have been paying close attention you may wonder why Illus-
-                  trator doesn’t use the check-mark convention for this menu item as it does in most of the other menu items in this menu!
+                    The libraries and information centres can develop and design their own Web pages and host
+                    them on the Internet to gain visibility as well as provide access to their local OPAC.
+                    Technologies like HTML, DHTML, and XML help in creating and designing Web pages.
+                    Uniform Resource Locator, know by a variety of similar names are techniques for
+                    establishing Internet address where files and other resources can be located. A through
+                    understanding of the different URLs and their proper use is essential for good Web design. It
+                    is necessary one should know at least basic HTML tags to put the information on Internet.
+                    Though HTML has certain problems associated with it for example, inability to handle
+                    efficient search, but still it is widely used for web page design.
                  </p>
-                   <h3><b>Connecting Lines</b></h3>
-                   <p>
-                   We now need to connect the two parts of the heart Zoom in on the bottom two points, and with the pen tool, put your mouse cursor over one of the ends
-                    The cursor will show a forward slash next to it when you are ready to continue the line (which we are going to do) Click, then move the cursor to the end
-                    of the other line Now the cursor shows a small box with a line behind it This means that clicking will join two lines Click to join the lines Now we have
-                    two points, where we should have one, but that is not a problem With the pen tool or the delete anchor point tool click to delete one of the points.
-                   </p>
+
                 </div>
             </div>
         </div>
       
-               <div class="accordion-item">
+        <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingFive">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                      <h3>5. illustrator type </h3>
+                      <h3>5. Web Design: Concept, Context and Content </h3>
                   </button>
               </h2>
               <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
                   data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                   <p>
-                  So far we have been examining the drawing tools in Illustrator, but type control is perhaps the most lexible and powerful aspect of the application. In this chapter
-                  we will examine some of the type controls in the application, because, after all, it would be unusual to complete a design without using those ubiquitous symbols we call letters.
+                    Believe it or not but website design does not have such a long history. That's
+                    basically because the Internet has not been around that long and it is only in the past
+                    decade that the Internet has exploded and become part of people's everyday lives. So,
+                    website design is still new in the grand scheme of things, but it has certainly
+                    undergone many changes over the years.
                   </p>
                   <h3><b>Two Ways to Make Type</b></h3>
                   <p>
@@ -260,12 +301,12 @@
                    </p>
                 </div>
             </div>
-          </div>
-            <div class="accordion-item">
+        </div>
+        <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingNine">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                    <h3>6. photoshop basics</h3>
+                    <h3>6. Elements and Principles of Design</h3>
                 </button>
             </h2>
             <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
@@ -310,7 +351,7 @@
             <h2 class="accordion-header" id="flush-headingSix">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                    <h3>7. photoshop layers</h3>
+                    <h3>7. Considering Tools and Stockpiling Goods</h3>
                 </button>
             </h2>
             <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
@@ -355,7 +396,7 @@
               <h2 class="accordion-header" id="flush-headingSeven">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
-                      <h3>8. images to illustrator</h3>
+                      <h3>8. INTERNET CONNECTIVITY AND SERVER SPACE</h3>
                   </button>
               </h2>
               <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
@@ -386,11 +427,11 @@
                   </div>
             </div>
           </div>
-               <div class="accordion-item">
+            <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingEight">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                      <h3> 9. Design </h3>
+                      <h3> 9. Planning To Design web page </h3>
                   </button>
               </h2>
               <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
@@ -408,18 +449,6 @@
           </div>
           
     </div>
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/62e2819e54f06e12d88bc592/1g92ckltj';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
-<!--End of Tawk.to Script-->
-     <a class= "btn btn-danger butto" href="{{('graphicNotes')}}"><h3>Download PDF</h3></a>
-@endsection
+
+
+

@@ -58,10 +58,11 @@ class MpesaController extends Controller
     public function customerMpesaSTKPush()
     {
      
+        $user = Auth::user();
        
-
-       $phone = User::first()->phone_no;
-       dd($phone);
+       $phonet = User::all();
+       $phone = User::first();
+      
         $formatedPhone = substr($phone, 0);
         $code = "254";
         $phoneNumber = $code.$phone;
