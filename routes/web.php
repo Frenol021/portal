@@ -32,12 +32,12 @@ Route::post('/login',[UserController::class, 'login']);
 
 
 Route::get('/registration',[RegistrationController::class,'registration'])->name('registration');
-Route::get('/enroll',[UnitController::class,'enroll']);
+//Route::get('/enroll',[UnitController::class,'enroll']);
 Route::get('add_to_curriculum/{id}',[App\Http\Controllers\HomeController::class,'addToCurriculum'])->name('add_to_curriculum');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/enroll', [App\Http\Controllers\HomeController::class, 'enroll'])->name('enroll');
+Route::get('enroll', [App\Http\Controllers\HomeController::class, 'enroll'])->name('enroll');
 
 Route::get('curriculum',[App\Http\Controllers\HomeController::class,'curriculum'])->name('curriculum');
 Route::get('removeCurriculum/{id}',[App\Http\Controllers\HomeController::class,'removeCurriculum'])->name('removeCurriculum');
@@ -56,3 +56,4 @@ Route::get('/dataNotes',[App\Http\Controllers\ProgramController::class,'dataNote
 Route::get('/cyberNotes',[App\Http\Controllers\ProgramController::class,'cyberNotes']);
 Route::get('/graphicNotes',[App\Http\Controllers\ProgramController::class,'graphicNotes']);
 Route::get('/softwareNotes',[App\Http\Controllers\ProgramController::class,'softwareNotes']);
+

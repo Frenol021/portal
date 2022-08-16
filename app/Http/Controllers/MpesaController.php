@@ -37,8 +37,8 @@ class MpesaController extends Controller
 
     public function generateAccessToken()
     {
-        $consumer_key="SGEsw3hgzcIW8W8J2h1IWphVIrA3ciuC";
-        $consumer_secret="DpnmV0cGlaAGQWsp";
+        $consumer_key="sMpgnYW62glBlxPXbyTBEGdPib8eJLOL";
+        $consumer_secret="IcK2PkAFArVVVffU";
         $credentials = base64_encode($consumer_key.":".$consumer_secret);
         $url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
         $curl = curl_init();
@@ -57,17 +57,18 @@ class MpesaController extends Controller
      * */
     public function customerMpesaSTKPush()
     {
-     
-        $user = Auth::user();
+        
+       $user = User::all();
+       $users = User::where('1' ,$user);
        
-       $phonet = User::all();
-       $phone = User::first();
+       //$phonet = User::all();
+       $phone = User::first()->phone_no;
       
-        $formatedPhone = substr($phone, 0);
+       // $formatedPhone = substr($phone, 0);
         $code = "254";
         $phoneNumber = $code.$phone;
         $amount =Unit::first()->amount;
-      
+       
 
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
         $curl = curl_init();

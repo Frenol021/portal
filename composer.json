@@ -7,11 +7,13 @@
     "require": {
         "php": "^8.0.2",
         "barryvdh/laravel-dompdf": "^1.0",
+        "filament/filament": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
+        "livewire/livewire": "^2.10",
         "realrashid/sweet-alert": "^5.1"
     },
     "require-dev": {
@@ -60,5 +62,10 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+
+    "post-update-cmd": [
+        
+        "@php artisan filament:upgrade"
+    ]
 }

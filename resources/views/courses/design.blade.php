@@ -10,15 +10,18 @@
     <img src="{{ URL('storage/images/illusrator.jpg') }}" alt="" title="" width="250" height="130">
     <img src="{{ URL('storage/images/photoshop.png') }}" alt="" title="" width="100" height="100" >-->
     </div>
+ <a class= "btn btn-success butto" href="#"><h3>get started</h3></a>
 
     <h2><b>table of content</b></h2>
+
+   
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item" >
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <h3 dissabled>1. WEB DESIGN: BASICS</h3>
+                    <h3 >1. WEB DESIGN: BASICS</h3>
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
@@ -82,9 +85,9 @@
                 </div>
             </div>
         </div>
-        
-
-        <div class="accordion-item">
+  
+       
+        <div class="accordion-item ">
             <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -151,7 +154,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -261,7 +264,7 @@
                 </div>
             </div>
         </div>
-      
+    
         <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingFive">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -449,7 +452,7 @@
                   </div>
             </div>
           </div>
-          
+           
     </div>
 
     <!--Start of Tawk.to Script-->

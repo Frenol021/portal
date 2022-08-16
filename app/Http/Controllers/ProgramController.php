@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 use PDF;
-
+use App\Models\Course;
 class ProgramController extends Controller
 {
     //
@@ -62,20 +62,25 @@ class ProgramController extends Controller
             
         return $pdf->download('cyber.pdf'); 
     }
+    
 
 //web design
+
     public function design(){
+    
         return view('courses/design');
     }
 
     public function designReport(){ 
-        
+        $id = "id";
 
         $pdf = PDF::loadView('courses/dpdf')->setOptions(['defaultFont' => 'sans-serif']); 
             
         return $pdf->download('design.pdf'); 
     }
+
     //software development
+
     public function software(){
         return view('courses/software');
     }

@@ -12,7 +12,9 @@ use App\Mail\Email;
 use phpDocumentor\Reflection\PseudoTypes\False_;
 use phpDocumentor\Reflection\PseudoTypes\True_;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use App\Models\Content;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -39,10 +41,64 @@ class HomeController extends Controller
         
     }
       public function enroll(){
+        
 
-        $users=Unit::all();
-        return view('enroll',compact('users'));
+        //$contents = Content::select('unit_id')->get()->first()->unit_id;
+        $conte = DB::table('contents')->pluck('unit_id')->all();
+
+        //finding the id which is 
+        $user = Auth::user()->id;
+        
+        $use = Course::where('user_id', $user)->first();
+
+        if ($use == null) {
+          Alert::warning('heey', 'have you enrolled and payed for the course');
+          return redirect()->back();
+        }else{
+          $id = Course::where('user_id', $user)->first()->unit_id;
+          
+        }
+       //displaying the table of content to specific payed course
+  
+        if(in_array($id, $conte) && $id==7){
+         
+        $contents = Content::where('unit_id', $id)->pluck('subtopic');
+   
+          return view('enroll', compact('contents'));
+          
+        }elseif(in_array($id, $conte) && $id==6){
+          $contents = Content::where('unit_id', $id)->pluck('subtopic');
+   
+          return view('enroll', compact('contents'));
+
+        }elseif(in_array($id, $conte) && $id==5){
+          $contents = Content::where('unit_id', $id)->pluck('subtopic');
+   
+          return view('enroll', compact('contents'));
+
+        }elseif(in_array($id, $conte) && $id==4){
+             $contents = Content::where('unit_id', $id)->pluck('subtopic');
+   
+          return view('enroll', compact('contents'));
+        }elseif(in_array($id, $conte) && $id==3){
+          $contents = Content::where('unit_id', $id)->pluck('subtopic');
+
+          return view('enroll', compact('contents'));
+        }elseif(in_array($id, $conte) && $id==2){
+          $contents = Content::where('unit_id', $id)->pluck('subtopic');
+
+          return view('enroll', compact('contents'));
+         }else{
+          return("it seems you have not paid for the course ");
+        }
+    
       }
+// to be able to study in sequential order
+
+public function studying(){
+
+}
+
       public function addToCurriculum($id){
 
         $user=Auth::user()->id;

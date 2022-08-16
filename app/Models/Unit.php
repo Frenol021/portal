@@ -18,4 +18,8 @@ class Unit extends Model
         
     ];
 
+    public function content()
+    {
+        return $this->hasMany(Content::class);
+    }
 }
